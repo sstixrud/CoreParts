@@ -16,7 +16,7 @@ namespace Scripts
             {
                 MountPoints = new[] {
                     new MountPointDef {
-                        SubtypeId = "WTFUpgrade",
+                        SubtypeId = "LargeWeaponUpgrade",
                         AimPartId = "None",
                         MuzzlePartId = "f75recoil",
                         AzimuthPartId = "None",

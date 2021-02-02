@@ -3,9 +3,9 @@
 <CubeBlocks>
 
  
-  <Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+  <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
       <Id>
-        <TypeId>UpgradeModule</TypeId>
+        <TypeId>ConveyorSorter</TypeId>
         <SubtypeId>LargeWeaponUpgrade</SubtypeId>
       </Id>
       <DisplayName>Weapon Upgrade</DisplayName>
