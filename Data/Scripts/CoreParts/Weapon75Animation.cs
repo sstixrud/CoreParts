@@ -8,7 +8,7 @@ namespace Scripts
 { // Don't edit above this line
     partial class Parts
     {
-        private AnimationDef Railgunx75f_Animation => new AnimationDef
+        private AnimationDef Weapon75_Animation => new AnimationDef
         {
 			
 

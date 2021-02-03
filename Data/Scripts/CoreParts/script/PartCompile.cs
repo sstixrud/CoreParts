@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using VRageMath;
 using static Scripts.PartStructure;
-using static Scripts.PartStructure.PartDefinition;
 using static Scripts.PartStructure.PartDefinition.AmmoDef;
 using static Scripts.PartStructure.PartDefinition.AnimationDef.RelMove;
 using static Scripts.PartStructure.PartDefinition.AnimationDef.PartAnimationSetDef;
@@ -13,7 +12,7 @@ namespace Scripts
     partial class Parts
     {
         internal List<PartDefinition> Colletion = new List<PartDefinition>();
-        internal void ConfigFiles(params PartStructure.PartDefinition[] defs)
+        internal void ConfigFiles(params PartDefinition[] defs)
         {
             foreach (var def in defs) Colletion.Add(def);
         }

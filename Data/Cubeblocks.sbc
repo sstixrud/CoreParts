@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <CubeBlocks>
+  
+    <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+      <Id>
+        <TypeId>ConveyorSorter</TypeId>
+        <SubtypeId>PdcUpgrade</SubtypeId>
+      </Id>
+      <DisplayName>Pdc Upgrade</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\PDC_turret.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Railgun75f.mwm</Model>
+      <Components>
+        <Component Subtype="Girder" Count="32" />
+        <Component Subtype="MetalGrid" Count="4" />
+        <Component Subtype="Construction" Count="16" />
+		<Component Subtype="Motor" Count="2" />
+        <Component Subtype="InteriorPlate" Count="16" />
+		<Component Subtype="Superconductor" Count="6" />
+        <Component Subtype="Detector" Count="6" />
+        <Component Subtype="RadioCommunication" Count="16" />
+        <Component Subtype="Computer" Count="40" />
+        <Component Subtype="SteelPlate" Count="16" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\DamageEnhancerLarge_Constr1.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>WeaponUpgrade</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" PropertiesMask="2" />
+      </MountPoints>
+      <IsAirTight>false</IsAirTight>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <PhysicalMaterial>Metal</PhysicalMaterial>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <Upgrades></Upgrades>
+    </Definition>
+  
+    <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeMissileTurret</TypeId>
+        <SubtypeId>PDCTurretLB</SubtypeId>
+      </Id>
+      <DisplayName>Weapon Thread Testin Apparatus</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\PDC_turret.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\PDCTurretLB.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="30" />
+        <Component Subtype="Construction" Count="10" />
+        <Component Subtype="LargeTube" Count="3" />
+		<Component Subtype="MetalGrid" Count="4" />
+        <Component Subtype="Motor" Count="8" />
+        <Component Subtype="Computer" Count="300" />
+        <Component Subtype="Construction" Count="10" />
+        <Component Subtype="SteelPlate" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\PDCTurretLB_Constr1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\PDCTurretLB_Constr2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\PDCTurretLB_Constr3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>PDCTurrets234</BlockPairName>
+      <Description>Weapon Core testing apparatus.</Description>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+	  <EmissiveColorPreset>Extended</EmissiveColorPreset>
+      <BuildTimeSeconds>30</BuildTimeSeconds>
+      <WeaponDefinitionId Subtype="PDCTurret" />
+      <InventoryMaxVolume>0.384</InventoryMaxVolume>
+      <MinElevationDegrees>-9</MinElevationDegrees>
+      <MaxElevationDegrees>50</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RotationSpeed>0.006</RotationSpeed>
+      <ElevationSpeed>0.006</ElevationSpeed>
+	  <MaxRangeMeters>5000</MaxRangeMeters>
+      <IdlePower>2</IdlePower>
+	  <UsePower>6</UsePower>
+      <MinFov>0.1</MinFov>
+      <MaxFov>1.04719755</MaxFov>
+	  <AiEnabled>false</AiEnabled>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <MaxRangeMeters>800</MaxRangeMeters>
+      <PCU>225</PCU>
+    </Definition>
+
+    <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
+      <Id>
+        <TypeId>LargeMissileTurret</TypeId>
+        <SubtypeId>PDCTurretSB</SubtypeId>
+      </Id>
+      <DisplayName>Weapon Thread Testin Apparatus</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\PDC_turret.dds</Icon>
+      <CubeSize>Small</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="5" y="5" z="5" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\PDCTurretLB.mwm</Model>
+      <UseModelIntersection>true</UseModelIntersection>
+      <Components>
+        <Component Subtype="SteelPlate" Count="30" />
+        <Component Subtype="Construction" Count="10" />
+        <Component Subtype="LargeTube" Count="3" />
+		<Component Subtype="MetalGrid" Count="4" />
+        <Component Subtype="Motor" Count="8" />
+        <Component Subtype="Computer" Count="300" />
+        <Component Subtype="Construction" Count="10" />
+        <Component Subtype="SteelPlate" Count="10" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="4" EndY="4" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\PDCTurretLB_Constr1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\PDCTurretLB_Constr2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\PDCTurretLB_Constr3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>PDCTurrets234</BlockPairName>
+      <Description>Weapon Core testing apparatus.</Description>
+      <MirroringY>Z</MirroringY>
+      <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+	  <EmissiveColorPreset>Extended</EmissiveColorPreset>
+      <BuildTimeSeconds>30</BuildTimeSeconds>
+      <WeaponDefinitionId Subtype="PDCTurret" />
+      <InventoryMaxVolume>0.384</InventoryMaxVolume>
+      <MinElevationDegrees>-9</MinElevationDegrees>
+      <MaxElevationDegrees>50</MaxElevationDegrees>
+      <MinAzimuthDegrees>-180</MinAzimuthDegrees>
+      <MaxAzimuthDegrees>180</MaxAzimuthDegrees>
+      <RotationSpeed>0.005</RotationSpeed>
+      <ElevationSpeed>0.004</ElevationSpeed>
+	  <MaxRangeMeters>5000</MaxRangeMeters>
+      <IdlePower>2</IdlePower>
+	  <UsePower>6</UsePower>
+      <MinFov>0.1</MinFov>
+      <MaxFov>1.04719755</MaxFov>
+	  <AiEnabled>false</AiEnabled>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <MaxRangeMeters>800</MaxRangeMeters>
+      <PCU>225</PCU>
+    </Definition>
+
+  </CubeBlocks>
+  <BlueprintClassEntries>
+   
+    <Entry Class="LargeBlocks" BlueprintSubtypeId="LargeGatlingTurret/PDCTurretLB" />
+    <Entry Class="SmallBlocks" BlueprintSubtypeId="LargeGatlingTurret/PDCTurretSB" />
+    <Entry Class="Ammo" BlueprintSubtypeId="DeU_25x184mm" />
+  </BlueprintClassEntries>
+</Definitions>

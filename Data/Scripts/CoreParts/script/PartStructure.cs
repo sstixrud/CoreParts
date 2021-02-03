@@ -261,9 +261,12 @@ namespace Scripts
                     public enum HardwareType
                     {
                         BlockWeapon,
-                        Passive,
-                        Active,
+                        HandWeapon,
+                        PassiveArmor,
+                        ActiveArmor,
+                        RegenArmor,
                         Upgrade,
+                        Phantom,
                     }
 
                     [ProtoMember(1)] internal float RotateRate;
