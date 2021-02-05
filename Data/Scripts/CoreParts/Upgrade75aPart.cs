@@ -9,7 +9,7 @@ using static Scripts.Structure.PartDefinition.HardPointDef.HardwareDef.HardwareT
 namespace Scripts {   
     partial class Parts {
         // Don't edit above this line
-        PartDefinition Upgrade75 => new PartDefinition
+        PartDefinition Upgrade75a => new PartDefinition
         {
 
             Assignments = new ModelAssignmentsDef
@@ -45,7 +45,7 @@ namespace Scripts {
             },
             HardPoint = new HardPointDef
             {
-                PartName = "Upgrade75", // name of weapon in terminal
+                PartName = "Upgrade75a", // name of weapon in terminal
                 DeviateShotAngle = 0.2f,
                 AimingTolerance = 1f, // 0 - 180 firing angle
                 AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced
