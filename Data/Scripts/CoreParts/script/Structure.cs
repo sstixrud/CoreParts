@@ -4,10 +4,13 @@ using VRageMath;
 
 namespace Scripts
 {
-    public class PartStructure
+    public class Structure
     {
         [ProtoContract]
-        public struct PartDefinition
+        public class BaseDefinition { }
+
+        [ProtoContract]
+        public class PartDefinition : BaseDefinition
         {
             [ProtoMember(1)] internal ModelAssignmentsDef Assignments;
             [ProtoMember(2)] internal TargetingDef Targeting;
@@ -783,9 +786,8 @@ namespace Scripts
             }
         }
 
-
         [ProtoContract]
-        public struct ArmorCompatibilityDef
+        public class ArmorDefinition : BaseDefinition
         {
             internal enum ArmorType
             {
@@ -793,8 +795,11 @@ namespace Scripts
                 Heavy,
                 NonArmor,
             }
+
             [ProtoMember(1)] internal string SubtypeId;
             [ProtoMember(2)] internal ArmorType Kind;
+            [ProtoMember(3)] internal double KineticResistance;
+            [ProtoMember(4)] internal double EnergeticResistance;
         }
     }
 }

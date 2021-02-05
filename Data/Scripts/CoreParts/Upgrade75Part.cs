@@ -1,11 +1,11 @@
-﻿using static Scripts.PartStructure;
-using static Scripts.PartStructure.PartDefinition;
-using static Scripts.PartStructure.PartDefinition.ModelAssignmentsDef;
-using static Scripts.PartStructure.PartDefinition.HardPointDef;
-using static Scripts.PartStructure.PartDefinition.HardPointDef.Prediction;
-using static Scripts.PartStructure.PartDefinition.TargetingDef.BlockTypes;
-using static Scripts.PartStructure.PartDefinition.TargetingDef.Threat;
-using static Scripts.PartStructure.PartDefinition.HardPointDef.HardwareDef.HardwareType;
+﻿using static Scripts.Structure;
+using static Scripts.Structure.PartDefinition;
+using static Scripts.Structure.PartDefinition.ModelAssignmentsDef;
+using static Scripts.Structure.PartDefinition.HardPointDef;
+using static Scripts.Structure.PartDefinition.HardPointDef.Prediction;
+using static Scripts.Structure.PartDefinition.TargetingDef.BlockTypes;
+using static Scripts.Structure.PartDefinition.TargetingDef.Threat;
+using static Scripts.Structure.PartDefinition.HardPointDef.HardwareDef.HardwareType;
 namespace Scripts {   
     partial class Parts {
         // Don't edit above this line

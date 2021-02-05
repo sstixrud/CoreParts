@@ -1,25 +1,31 @@
 ﻿using System.Collections.Generic;
 using VRageMath;
-using static Scripts.PartStructure;
-using static Scripts.PartStructure.PartDefinition.AmmoDef;
-using static Scripts.PartStructure.PartDefinition.AnimationDef.RelMove;
-using static Scripts.PartStructure.PartDefinition.AnimationDef.PartAnimationSetDef;
-using static Scripts.PartStructure.PartDefinition.AnimationDef;
-using static Scripts.PartStructure.PartDefinition.AnimationDef.PartAnimationSetDef.EventTriggers;
+using static Scripts.Structure;
+using static Scripts.Structure.PartDefinition.AmmoDef;
+using static Scripts.Structure.PartDefinition.AnimationDef.RelMove;
+using static Scripts.Structure.PartDefinition.AnimationDef.PartAnimationSetDef;
+using static Scripts.Structure.PartDefinition.AnimationDef;
+using static Scripts.Structure.PartDefinition.AnimationDef.PartAnimationSetDef.EventTriggers;
+using static Scripts.Structure.ArmorDefinition.ArmorType;
 
 namespace Scripts
 {
     partial class Parts
     {
-        internal List<PartDefinition> Colletion = new List<PartDefinition>();
-        internal void ConfigFiles(params PartDefinition[] defs)
+        internal List<BaseDefinition> Colletion = new List<BaseDefinition>();
+        internal void ConfigFiles(params BaseDefinition[] defs)
         {
             foreach (var def in defs) Colletion.Add(def);
         }
 
-        internal PartDefinition[] ReturnDefs()
+        internal static void GetBaseDefinitions(out BaseDefinition[] baseDefs)
         {
-            var partDefinitions = new PartDefinition[Colletion.Count];
+            baseDefs = new Parts().ReturnDefs();
+        }
+
+        internal BaseDefinition[] ReturnDefs()
+        {
+            var partDefinitions = new BaseDefinition[Colletion.Count];
             for (int i = 0; i < Colletion.Count; i++) partDefinitions[i] = Colletion[i];
             Colletion.Clear();
             return partDefinitions;

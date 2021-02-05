@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using static Scripts.PartStructure.PartDefinition;
-using static Scripts.PartStructure.PartDefinition.AnimationDef;
-using static Scripts.PartStructure.PartDefinition.AnimationDef.PartAnimationSetDef.EventTriggers;
-using static Scripts.PartStructure.PartDefinition.AnimationDef.RelMove.MoveType;
-using static Scripts.PartStructure.PartDefinition.AnimationDef.RelMove;
+using static Scripts.Structure.PartDefinition;
+using static Scripts.Structure.PartDefinition.AnimationDef;
+using static Scripts.Structure.PartDefinition.AnimationDef.PartAnimationSetDef.EventTriggers;
+using static Scripts.Structure.PartDefinition.AnimationDef.RelMove.MoveType;
+using static Scripts.Structure.PartDefinition.AnimationDef.RelMove;
 namespace Scripts
 { // Don't edit above this line
     partial class Parts
