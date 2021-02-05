@@ -17,7 +17,6 @@ namespace Scripts {
                 MountPoints = new[] {
                     new MountPointDef {
                         SubtypeId = "PdcUpgrade",
-                        MuzzlePartId = "f75recoil",
                     },
 
                 },

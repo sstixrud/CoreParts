@@ -7,10 +7,14 @@ namespace Scripts
     public class Structure
     {
         [ProtoContract]
-        public class BaseDefinition { }
+        public class ContainerDefinition
+        {
+            [ProtoMember(1)] internal PartDefinition[] PartDefs;
+            [ProtoMember(2)] internal ArmorDefinition[] ArmorDefs;
+        }
 
         [ProtoContract]
-        public class PartDefinition : BaseDefinition
+        public class PartDefinition
         {
             [ProtoMember(1)] internal ModelAssignmentsDef Assignments;
             [ProtoMember(2)] internal TargetingDef Targeting;
@@ -392,6 +396,21 @@ namespace Scripts
                     }
 
                     [ProtoContract]
+                    public struct DamageTypes
+                    {
+                        internal enum Damage
+                        {
+                            Energetic,
+                            Kinetic,
+                        }
+
+                        [ProtoMember(1)] internal Damage Base;
+                        [ProtoMember(2)] internal Damage AreaEffect;
+                        [ProtoMember(3)] internal Damage Detonation;
+                        [ProtoMember(4)] internal Damage Shield;
+                    }
+
+                    [ProtoContract]
                     public struct ShieldDef
                     {
                         internal enum ShieldType
@@ -399,8 +418,8 @@ namespace Scripts
                             Heal,
                             Bypass,
                             Emp,
-                            Energy,
-                            Kinetic
+                            Energy, // retired
+                            Kinetic // retired
                         }
 
                         [ProtoMember(1)] internal float Modifier;
@@ -787,7 +806,7 @@ namespace Scripts
         }
 
         [ProtoContract]
-        public class ArmorDefinition : BaseDefinition
+        public class ArmorDefinition 
         {
             internal enum ArmorType
             {

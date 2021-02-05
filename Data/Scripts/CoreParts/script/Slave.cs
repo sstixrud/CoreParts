@@ -39,17 +39,14 @@ namespace Scripts
 
         internal void Init()
         {
-            BaseDefinition[] baseDefs;
+            ContainerDefinition baseDefs;
             Parts.GetBaseDefinitions(out baseDefs);
-            Log.CleanLine($"Found: {baseDefs.Length} part definitions");
-            for (int i = 0; i < baseDefs.Length; i++)
+            for (int i = 0; i < baseDefs.PartDefs.Length; i++)
             {
-                var baseDef = baseDefs[i];
-                var partDef = baseDef as PartDefinition;
+                var partDef = baseDefs.PartDefs[i];
 
                 if (partDef != null) 
                     partDef.ModPath = ModContext.ModPath;
-
             }
             Storage = MyAPIGateway.Utilities.SerializeToBinary(baseDefs);
             Log.CleanLine($"Handing over control to Core and going to sleep");

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using VRageMath;
 using static Scripts.Structure;
 using static Scripts.Structure.PartDefinition.AmmoDef;
@@ -12,24 +13,22 @@ namespace Scripts
 {
     partial class Parts
     {
-        internal List<BaseDefinition> Colletion = new List<BaseDefinition>();
-        internal void ConfigFiles(params BaseDefinition[] defs)
+        internal ContainerDefinition Container = new ContainerDefinition();
+        internal void PartFiles(params PartDefinition[] defs)
         {
-            foreach (var def in defs) Colletion.Add(def);
+            Container.PartDefs = defs;
         }
 
-        internal static void GetBaseDefinitions(out BaseDefinition[] baseDefs)
+        internal void ArmorFiles(params ArmorDefinition[] defs)
         {
-            baseDefs = new Parts().ReturnDefs();
+            Container.ArmorDefs = defs;
         }
 
-        internal BaseDefinition[] ReturnDefs()
+        internal static void GetBaseDefinitions(out ContainerDefinition baseDefs)
         {
-            var partDefinitions = new BaseDefinition[Colletion.Count];
-            for (int i = 0; i < Colletion.Count; i++) partDefinitions[i] = Colletion[i];
-            Colletion.Clear();
-            return partDefinitions;
+            baseDefs = new Parts().Container;
         }
+
 
         internal Randomize Random(float start, float end)
         {
