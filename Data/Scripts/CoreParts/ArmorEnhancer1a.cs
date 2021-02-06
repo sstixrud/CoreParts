@@ -9,14 +9,14 @@ using static Scripts.Structure.PartDefinition.HardPointDef.HardwareDef.HardwareT
 namespace Scripts {   
     partial class Parts {
         // Don't edit above this line
-        PartDefinition Upgrade75a => new PartDefinition
+        PartDefinition ArmorEnhancer1a => new PartDefinition
         {
 
             Assignments = new ModelAssignmentsDef
             {
                 MountPoints = new[] {
                     new MountPointDef {
-                        SubtypeId = "Upgrade75a",
+                        SubtypeId = "ArmorEnhancer1a",
                     },
 
                 },
@@ -45,7 +45,7 @@ namespace Scripts {
             },
             HardPoint = new HardPointDef
             {
-                PartName = "Upgrade75a", // name of weapon in terminal
+                PartName = "ArmorEnhancer1a", // name of weapon in terminal
                 DeviateShotAngle = 0.2f,
                 AimingTolerance = 1f, // 0 - 180 firing angle
                 AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced

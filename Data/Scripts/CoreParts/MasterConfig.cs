@@ -9,7 +9,7 @@ namespace Scripts
             //
             // Enable your config files using the follow syntax, don't include the ".cs" extension:
             // PartFiles(Your1stConfigFile, Your2ndConfigFile, Your3rdConfigFile);
-            PartFiles(Weapon75, Upgrade75a, Upgrade75b);
+            PartFiles(Weapon75, Upgrade75a, Upgrade75b, ArmorEnhancer1a);
             ArmorFiles(Armor1, Armor2);
         }
     }

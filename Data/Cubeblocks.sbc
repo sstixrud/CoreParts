@@ -2,13 +2,55 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
   <CubeBlocks>
-  
+
     <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
       <Id>
         <TypeId>ConveyorSorter</TypeId>
-        <SubtypeId>PdcUpgrade</SubtypeId>
+        <SubtypeId>ArmorEnhancer1a</SubtypeId>
       </Id>
-      <DisplayName>Pdc Upgrade</DisplayName>
+      <DisplayName>Armor Enhancer 1a</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\PDC_turret.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Railgun75f.mwm</Model>
+      <Components>
+        <Component Subtype="Girder" Count="32" />
+        <Component Subtype="MetalGrid" Count="4" />
+        <Component Subtype="Construction" Count="16" />
+        <Component Subtype="Motor" Count="2" />
+        <Component Subtype="InteriorPlate" Count="16" />
+        <Component Subtype="Superconductor" Count="6" />
+        <Component Subtype="Detector" Count="6" />
+        <Component Subtype="RadioCommunication" Count="16" />
+        <Component Subtype="Computer" Count="40" />
+        <Component Subtype="SteelPlate" Count="16" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\DamageEnhancerLarge_Constr1.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>ArmorEnhancer1a</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" PropertiesMask="2" />
+      </MountPoints>
+      <IsAirTight>false</IsAirTight>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <PhysicalMaterial>Metal</PhysicalMaterial>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <Upgrades></Upgrades>
+    </Definition>
+
+    <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+      <Id>
+        <TypeId>ConveyorSorter</TypeId>
+        <SubtypeId>Upgrade75a</SubtypeId>
+      </Id>
+      <DisplayName>Upgrade 75a</DisplayName>
       <Icon>Textures\GUI\Icons\Cubes\PDC_turret.dds</Icon>
       <CubeSize>Large</CubeSize>
       <BlockTopology>TriangleMesh</BlockTopology>
@@ -31,7 +73,7 @@
       <BuildProgressModels>
         <Model BuildPercentUpperBound="1.00" File="Models\Cubes\DamageEnhancerLarge_Constr1.mwm" />
       </BuildProgressModels>
-      <BlockPairName>WeaponUpgrade</BlockPairName>
+      <BlockPairName>Upgrade75a</BlockPairName>
       <EdgeType>Light</EdgeType>
       <BuildTimeSeconds>20</BuildTimeSeconds>
       <MountPoints>
@@ -44,7 +86,49 @@
       <EmissiveColorPreset>Default</EmissiveColorPreset>
       <Upgrades></Upgrades>
     </Definition>
-  
+
+    <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+      <Id>
+        <TypeId>ConveyorSorter</TypeId>
+        <SubtypeId>Upgrade75b</SubtypeId>
+      </Id>
+      <DisplayName>Upgrade 75b</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\PDC_turret.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="1" y="1" z="1" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Railgun75f.mwm</Model>
+      <Components>
+        <Component Subtype="Girder" Count="32" />
+        <Component Subtype="MetalGrid" Count="4" />
+        <Component Subtype="Construction" Count="16" />
+        <Component Subtype="Motor" Count="2" />
+        <Component Subtype="InteriorPlate" Count="16" />
+        <Component Subtype="Superconductor" Count="6" />
+        <Component Subtype="Detector" Count="6" />
+        <Component Subtype="RadioCommunication" Count="16" />
+        <Component Subtype="Computer" Count="40" />
+        <Component Subtype="SteelPlate" Count="16" />
+      </Components>
+      <CriticalComponent Subtype="Computer" Index="0" />
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\DamageEnhancerLarge_Constr1.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>Upgrade75b</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>20</BuildTimeSeconds>
+      <MountPoints>
+        <MountPoint Side="Bottom" StartX="0.0" StartY="0.0" EndX="1.0" EndY="1.0" PropertiesMask="2" />
+      </MountPoints>
+      <IsAirTight>false</IsAirTight>
+      <MirroringZ>Y</MirroringZ>
+      <MirroringY>Z</MirroringY>
+      <PhysicalMaterial>Metal</PhysicalMaterial>
+      <EmissiveColorPreset>Default</EmissiveColorPreset>
+      <Upgrades></Upgrades>
+    </Definition>
+
     <Definition xsi:type="MyObjectBuilder_LargeTurretBaseDefinition">
       <Id>
         <TypeId>LargeMissileTurret</TypeId>

@@ -16,7 +16,7 @@ namespace Scripts {
             {
                 MountPoints = new[] {
                     new MountPointDef {
-                        SubtypeId = "PdcUpgrade",
+                        SubtypeId = "Upgrade75b",
                     },
 
                 },
