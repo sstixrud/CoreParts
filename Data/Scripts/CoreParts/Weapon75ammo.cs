@@ -1,20 +1,21 @@
-﻿using static Scripts.Structure.PartDefinition;
-using static Scripts.Structure.PartDefinition.AmmoDef;
-using static Scripts.Structure.PartDefinition.AmmoDef.EjectionDef;
-using static Scripts.Structure.PartDefinition.AmmoDef.EjectionDef.SpawnType;
-using static Scripts.Structure.PartDefinition.AmmoDef.ShapeDef.Shapes;
-using static Scripts.Structure.PartDefinition.AmmoDef.GraphicDef;
-using static Scripts.Structure.PartDefinition.AmmoDef.TrajectoryDef;
-using static Scripts.Structure.PartDefinition.AmmoDef.TrajectoryDef.GuidanceType;
-using static Scripts.Structure.PartDefinition.AmmoDef.DamageScaleDef;
-using static Scripts.Structure.PartDefinition.AmmoDef.DamageScaleDef.ShieldDef.ShieldType;
-using static Scripts.Structure.PartDefinition.AmmoDef.AreaDamageDef;
-using static Scripts.Structure.PartDefinition.AmmoDef.AreaDamageDef.AreaEffectType;
-using static Scripts.Structure.PartDefinition.AmmoDef.AreaDamageDef.EwarFieldsDef;
-using static Scripts.Structure.PartDefinition.AmmoDef.AreaDamageDef.EwarFieldsDef.PushPullDef.Force;
-using static Scripts.Structure.PartDefinition.AmmoDef.GraphicDef.LineDef;
-using static Scripts.Structure.PartDefinition.AmmoDef.GraphicDef.LineDef.TracerBaseDef;
-using static Scripts.Structure.PartDefinition.AmmoDef.GraphicDef.LineDef.Texture;
+﻿using static Scripts.Structure;
+using static Scripts.Structure.WeaponDefinition;
+using static Scripts.Structure.WeaponDefinition.AmmoDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef.SpawnType;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.ShapeDef.Shapes;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.TrajectoryDef.GuidanceType;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.ShieldDef.ShieldType;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaDamageDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaDamageDef.AreaEffectType;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaDamageDef.EwarFieldsDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaDamageDef.EwarFieldsDef.PushPullDef.Force;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.TracerBaseDef;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.Texture;
 
 namespace Scripts
 { // Don't edit above this line

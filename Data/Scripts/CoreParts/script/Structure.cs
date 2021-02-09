@@ -9,12 +9,218 @@ namespace Scripts
         [ProtoContract]
         public class ContainerDefinition
         {
-            [ProtoMember(1)] internal PartDefinition[] PartDefs;
+            [ProtoMember(1)] internal WeaponDefinition[] WeaponDefs;
             [ProtoMember(2)] internal ArmorDefinition[] ArmorDefs;
+            [ProtoMember(3)] internal UpgradeDefinition[] UpgradeDefs;
+            [ProtoMember(4)] internal SupportDefinition[] SupportDefs;
+            [ProtoMember(5)] internal PhantomDefinition[] PhantomDefs;
+
         }
 
         [ProtoContract]
-        public class PartDefinition
+        public class UpgradeDefinition
+        {
+            [ProtoMember(1)] internal ModelAssignmentsDef Assignments;
+            [ProtoMember(2)] internal HardPointDef HardPoint;
+            [ProtoMember(3)] internal WeaponDefinition.AnimationDef Animations;
+            [ProtoMember(4)] internal string ModPath;
+
+
+            [ProtoContract]
+            public struct ModelAssignmentsDef
+            {
+                [ProtoMember(1)] internal MountPointDef[] MountPoints;
+
+                [ProtoContract]
+                public struct MountPointDef
+                {
+                    [ProtoMember(1)] internal string SubtypeId;
+                    [ProtoMember(2)] internal float DurabilityMod;
+                    [ProtoMember(3)] internal string IconName;
+                }
+            }
+
+            [ProtoContract]
+            public struct HardPointDef
+            {
+                [ProtoMember(1)] internal string PartName;
+                [ProtoMember(2)] internal HardwareDef HardWare;
+                [ProtoMember(3)] internal UiDef Ui;
+                [ProtoMember(4)] internal OtherDef Other;
+
+
+                [ProtoContract]
+                public struct UiDef
+                {
+                    [ProtoMember(1)] internal bool StrengthModifier;
+                }
+
+                [ProtoContract]
+                public struct HardwareDef
+                {
+                    public enum HardwareType
+                    {
+                        Default,
+                    }
+
+                    [ProtoMember(1)] internal float InventorySize;
+                    [ProtoMember(2)] internal HardwareType Type;
+                }
+
+                [ProtoContract]
+                public struct OtherDef
+                {
+                    [ProtoMember(1)] internal int ConstructPartCap;
+                    [ProtoMember(2)] internal int EnergyPriority;
+                    [ProtoMember(3)] internal bool Debug;
+                    [ProtoMember(4)] internal double RestrictionRadius;
+                    [ProtoMember(5)] internal bool CheckInflatedBox;
+                    [ProtoMember(6)] internal bool CheckForAnySupport;
+                }
+            }
+        }
+
+        [ProtoContract]
+        public class SupportDefinition
+        {
+            [ProtoMember(1)] internal ModelAssignmentsDef Assignments;
+            [ProtoMember(2)] internal HardPointDef HardPoint;
+            [ProtoMember(3)] internal WeaponDefinition.AnimationDef Animations;
+            [ProtoMember(4)] internal string ModPath;
+
+            [ProtoContract]
+            public struct ModelAssignmentsDef
+            {
+                [ProtoMember(1)] internal MountPointDef[] MountPoints;
+
+                [ProtoContract]
+                public struct MountPointDef
+                {
+                    [ProtoMember(1)] internal string SubtypeId;
+                    [ProtoMember(2)] internal float DurabilityMod;
+                    [ProtoMember(3)] internal string IconName;
+                }
+            }
+            [ProtoContract]
+            public struct HardPointDef
+            {
+                [ProtoMember(1)] internal string PartName;
+                [ProtoMember(2)] internal HardwareDef HardWare;
+                [ProtoMember(3)] internal UiDef Ui;
+                [ProtoMember(4)] internal OtherDef Other;
+
+
+                [ProtoContract]
+                public struct UiDef
+                {
+                    [ProtoMember(1)] internal bool StrengthModifier;
+                }
+
+                [ProtoContract]
+                public struct HardwareDef
+                {
+                    public enum HardwareType
+                    {
+                        Default,
+                    }
+
+                    [ProtoMember(1)] internal float InventorySize;
+                    [ProtoMember(2)] internal HardwareType Type;
+                }
+
+                [ProtoContract]
+                public struct OtherDef
+                {
+                    [ProtoMember(1)] internal int ConstructPartCap;
+                    [ProtoMember(2)] internal int EnergyPriority;
+                    [ProtoMember(3)] internal bool Debug;
+                    [ProtoMember(4)] internal double RestrictionRadius;
+                    [ProtoMember(5)] internal bool CheckInflatedBox;
+                    [ProtoMember(6)] internal bool CheckForAnySupport;
+                }
+            }
+        }
+
+        [ProtoContract]
+        public class PhantomDefinition
+        {
+            [ProtoMember(1)] internal ModelAssignmentsDef Assignments;
+            [ProtoMember(2)] internal HardPointDef HardPoint;
+            [ProtoMember(3)] internal WeaponDefinition.AnimationDef Animations;
+            [ProtoMember(4)] internal string ModPath;
+
+            [ProtoContract]
+            public struct ModelAssignmentsDef
+            {
+                [ProtoMember(1)] internal MountPointDef[] MountPoints;
+
+                [ProtoContract]
+                public struct MountPointDef
+                {
+                    [ProtoMember(1)] internal string SubtypeId;
+                    [ProtoMember(2)] internal float DurabilityMod;
+                    [ProtoMember(3)] internal string IconName;
+                }
+            }
+            [ProtoContract]
+            public struct HardPointDef
+            {
+                [ProtoMember(1)] internal string PartName;
+                [ProtoMember(2)] internal HardwareDef HardWare;
+                [ProtoMember(3)] internal UiDef Ui;
+                [ProtoMember(4)] internal OtherDef Other;
+
+
+                [ProtoContract]
+                public struct UiDef
+                {
+                    [ProtoMember(1)] internal bool StrengthModifier;
+                }
+
+                [ProtoContract]
+                public struct HardwareDef
+                {
+                    public enum HardwareType
+                    {
+                        Default,
+                    }
+
+                    [ProtoMember(1)] internal float InventorySize;
+                    [ProtoMember(2)] internal HardwareType Type;
+                }
+
+                [ProtoContract]
+                public struct OtherDef
+                {
+                    [ProtoMember(1)] internal int ConstructPartCap;
+                    [ProtoMember(2)] internal int EnergyPriority;
+                    [ProtoMember(3)] internal bool Debug;
+                    [ProtoMember(4)] internal double RestrictionRadius;
+                    [ProtoMember(5)] internal bool CheckInflatedBox;
+                    [ProtoMember(6)] internal bool CheckForAnySupport;
+                }
+            }
+        }
+
+
+        [ProtoContract]
+        public class ArmorDefinition
+        {
+            internal enum ArmorType
+            {
+                Light,
+                Heavy,
+                NonArmor,
+            }
+
+            [ProtoMember(1)] internal string SubtypeId;
+            [ProtoMember(2)] internal ArmorType Kind;
+            [ProtoMember(3)] internal double KineticResistance;
+            [ProtoMember(4)] internal double EnergeticResistance;
+        }
+
+        [ProtoContract]
+        public class WeaponDefinition
         {
             [ProtoMember(1)] internal ModelAssignmentsDef Assignments;
             [ProtoMember(2)] internal TargetingDef Targeting;
@@ -285,7 +491,7 @@ namespace Scripts
                     [ProtoMember(7)] internal int MaxElevation;
                     [ProtoMember(8)] internal int MinElevation;
                     [ProtoMember(9)] internal float InventorySize;
-                    [ProtoMember(10)] internal HardwareType Hardware;
+                    [ProtoMember(10)] internal HardwareType Type;
                 }
 
                 [ProtoContract]
@@ -304,7 +510,7 @@ namespace Scripts
                 [ProtoContract]
                 public struct OtherDef
                 {
-                    [ProtoMember(1)] internal int GridWeaponCap;
+                    [ProtoMember(1)] internal int ConstructPartCap;
                     [ProtoMember(2)] internal int EnergyPriority;
                     [ProtoMember(3)] internal int RotateBarrelAxis;
                     [ProtoMember(4)] internal bool MuzzleCheck;
@@ -317,8 +523,8 @@ namespace Scripts
                 [ProtoContract]
                 public struct HardPointParticleDef
                 {
-                    [ProtoMember(1)] internal ParticleDef Barrel1;
-                    [ProtoMember(2)] internal ParticleDef Barrel2;
+                    [ProtoMember(1)] internal ParticleDef Effect1;
+                    [ProtoMember(2)] internal ParticleDef Effect2;
                 }
             }
 
@@ -803,22 +1009,6 @@ namespace Scripts
                 [ProtoMember(5)] internal bool ApplyToShield;
                 [ProtoMember(6)] internal bool ShrinkByDistance;
             }
-        }
-
-        [ProtoContract]
-        public class ArmorDefinition 
-        {
-            internal enum ArmorType
-            {
-                Light,
-                Heavy,
-                NonArmor,
-            }
-
-            [ProtoMember(1)] internal string SubtypeId;
-            [ProtoMember(2)] internal ArmorType Kind;
-            [ProtoMember(3)] internal double KineticResistance;
-            [ProtoMember(4)] internal double EnergeticResistance;
         }
     }
 }

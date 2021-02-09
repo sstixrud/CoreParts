@@ -41,9 +41,9 @@ namespace Scripts
         {
             ContainerDefinition baseDefs;
             Parts.GetBaseDefinitions(out baseDefs);
-            for (int i = 0; i < baseDefs.PartDefs.Length; i++)
+            for (int i = 0; i < baseDefs.WeaponDefs.Length; i++)
             {
-                var partDef = baseDefs.PartDefs[i];
+                var partDef = baseDefs.WeaponDefs[i];
 
                 if (partDef != null) 
                     partDef.ModPath = ModContext.ModPath;

@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using static Scripts.Structure.PartDefinition;
+using static Scripts.Structure.WeaponDefinition;
 
 namespace Scripts
 {

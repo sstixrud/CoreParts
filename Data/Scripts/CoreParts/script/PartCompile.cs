@@ -2,11 +2,11 @@
 using System.ComponentModel;
 using VRageMath;
 using static Scripts.Structure;
-using static Scripts.Structure.PartDefinition.AmmoDef;
-using static Scripts.Structure.PartDefinition.AnimationDef.RelMove;
-using static Scripts.Structure.PartDefinition.AnimationDef.PartAnimationSetDef;
-using static Scripts.Structure.PartDefinition.AnimationDef;
-using static Scripts.Structure.PartDefinition.AnimationDef.PartAnimationSetDef.EventTriggers;
+using static Scripts.Structure.WeaponDefinition.AmmoDef;
+using static Scripts.Structure.WeaponDefinition.AnimationDef.RelMove;
+using static Scripts.Structure.WeaponDefinition.AnimationDef.PartAnimationSetDef;
+using static Scripts.Structure.WeaponDefinition.AnimationDef;
+using static Scripts.Structure.WeaponDefinition.AnimationDef.PartAnimationSetDef.EventTriggers;
 using static Scripts.Structure.ArmorDefinition.ArmorType;
 
 namespace Scripts
@@ -14,14 +14,29 @@ namespace Scripts
     partial class Parts
     {
         internal ContainerDefinition Container = new ContainerDefinition();
-        internal void PartFiles(params PartDefinition[] defs)
+        internal void PartFiles(params WeaponDefinition[] defs)
         {
-            Container.PartDefs = defs;
+            Container.WeaponDefs = defs;
         }
 
         internal void ArmorFiles(params ArmorDefinition[] defs)
         {
             Container.ArmorDefs = defs;
+        }
+
+        internal void SupportFiles(params SupportDefinition[] defs)
+        {
+            Container.SupportDefs = defs;
+        }
+
+        internal void UpgradeFiles(params UpgradeDefinition[] defs)
+        {
+            Container.UpgradeDefs = defs;
+        }
+
+        internal void PhantomFiles(params PhantomDefinition[] defs)
+        {
+            Container.PhantomDefs = defs;
         }
 
         internal static void GetBaseDefinitions(out ContainerDefinition baseDefs)

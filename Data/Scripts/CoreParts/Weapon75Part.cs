@@ -1,15 +1,15 @@
 ﻿using static Scripts.Structure;
-using static Scripts.Structure.PartDefinition;
-using static Scripts.Structure.PartDefinition.ModelAssignmentsDef;
-using static Scripts.Structure.PartDefinition.HardPointDef;
-using static Scripts.Structure.PartDefinition.HardPointDef.Prediction;
-using static Scripts.Structure.PartDefinition.TargetingDef.BlockTypes;
-using static Scripts.Structure.PartDefinition.TargetingDef.Threat;
-using static Scripts.Structure.PartDefinition.HardPointDef.HardwareDef.HardwareType;
+using static Scripts.Structure.WeaponDefinition;
+using static Scripts.Structure.WeaponDefinition.ModelAssignmentsDef;
+using static Scripts.Structure.WeaponDefinition.HardPointDef;
+using static Scripts.Structure.WeaponDefinition.HardPointDef.Prediction;
+using static Scripts.Structure.WeaponDefinition.TargetingDef.BlockTypes;
+using static Scripts.Structure.WeaponDefinition.TargetingDef.Threat;
+using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef.HardwareType;
 namespace Scripts {   
     partial class Parts {
         // Don't edit above this line
-        PartDefinition Weapon75 => new PartDefinition
+        WeaponDefinition Weapon75 => new WeaponDefinition
         {
 
             Assignments = new ModelAssignmentsDef
@@ -101,11 +101,11 @@ namespace Scripts {
                     FixedOffset = false,
                     InventorySize = 1f,
                     Offset = Vector(x: 0, y: 0, z: 0),
-                    Hardware = BlockWeapon, // Upgrade, BlockWeapon, ActiveArmor, PassiveArmor, RegenArmor, Phantom 
+                    Type = BlockWeapon, // Upgrade, BlockWeapon, ActiveArmor, PassiveArmor, RegenArmor, Phantom 
                 },
                 Other = new OtherDef
                 {
-                    GridWeaponCap = 0,
+                    ConstructPartCap = 0,
                     RotateBarrelAxis = 0,
                     EnergyPriority = 0,
                     MuzzleCheck = false,
@@ -148,7 +148,7 @@ namespace Scripts {
                 Graphics = new HardPointParticleDef
                 {
 
-                    Barrel1 = new ParticleDef
+                    Effect1 = new ParticleDef
                     {
                         Name = "", // Smoke_LargeGunShot
                         Color = Color(red: 0, green: 0, blue: 0, alpha: 1),
@@ -162,7 +162,7 @@ namespace Scripts {
                             Scale = 1f,
                         },
                     },
-                    Barrel2 = new ParticleDef
+                    Effect2 = new ParticleDef
                     {
                         Name = "",//Muzzle_Flash_Large
                         Color = Color(red: 0, green: 0, blue: 0, alpha: 1),
