@@ -3,7 +3,6 @@ using static Scripts.Structure.UpgradeDefinition;
 using static Scripts.Structure.UpgradeDefinition.ModelAssignmentsDef;
 using static Scripts.Structure.UpgradeDefinition.HardPointDef;
 using static Scripts.Structure.UpgradeDefinition.HardPointDef.HardwareDef.HardwareType;
-using static Scripts.Structure.WeaponDefinition.AnimationDef;
 namespace Scripts {   
     partial class Parts {
         // Don't edit above this line

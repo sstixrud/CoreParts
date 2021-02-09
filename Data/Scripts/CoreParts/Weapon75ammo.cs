@@ -1,5 +1,4 @@
-﻿using static Scripts.Structure;
-using static Scripts.Structure.WeaponDefinition;
+﻿using static Scripts.Structure.WeaponDefinition;
 using static Scripts.Structure.WeaponDefinition.AmmoDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.EjectionDef.SpawnType;

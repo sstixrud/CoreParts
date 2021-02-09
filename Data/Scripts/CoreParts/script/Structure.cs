@@ -412,6 +412,7 @@ namespace Scripts
                 [ProtoMember(9)] internal int DelayAfterBurstMod;
                 [ProtoMember(10)] internal int AmmoPriority;
 
+                [ProtoContract]
                 public struct Dependency
                 {
                     internal string SubtypeId;

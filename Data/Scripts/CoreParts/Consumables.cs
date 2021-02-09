@@ -1,7 +1,4 @@
 ﻿using static Scripts.Structure;
-using static Scripts.Structure.SupportDefinition;
-using static Scripts.Structure.SupportDefinition.ModelAssignmentsDef;
-using static Scripts.Structure.SupportDefinition.HardPointDef.HardwareDef.HardwareType;
 
 namespace Scripts {   
     partial class Parts {
