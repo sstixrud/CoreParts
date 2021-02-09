@@ -6,7 +6,7 @@
     <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
       <Id>
         <TypeId>ConveyorSorter</TypeId>
-        <SubtypeId>ArmorEnhancer1a</SubtypeId>
+        <SubtypeId>ArmorSupport1a</SubtypeId>
       </Id>
       <DisplayName>Armor Enhancer 1a</DisplayName>
       <Icon>Textures\GUI\Icons\Cubes\PDC_turret.dds</Icon>
@@ -31,7 +31,7 @@
       <BuildProgressModels>
         <Model BuildPercentUpperBound="1.00" File="Models\Cubes\DamageEnhancerLarge_Constr1.mwm" />
       </BuildProgressModels>
-      <BlockPairName>ArmorEnhancer1a</BlockPairName>
+      <BlockPairName>ArmorSupport1a</BlockPairName>
       <EdgeType>Light</EdgeType>
       <BuildTimeSeconds>20</BuildTimeSeconds>
       <MountPoints>

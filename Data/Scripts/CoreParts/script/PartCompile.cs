@@ -43,7 +43,25 @@ namespace Scripts
         {
             baseDefs = new Parts().Container;
         }
+        
+        internal static void SetModPath(ContainerDefinition baseDefs, string modContext)
+        {
+            if (baseDefs.WeaponDefs != null)
+                for (int i = 0; i < baseDefs.WeaponDefs.Length; i++)
+                    baseDefs.WeaponDefs[i].ModPath = modContext;
 
+            if (baseDefs.SupportDefs != null)
+                for (int i = 0; i < baseDefs.SupportDefs.Length; i++)
+                    baseDefs.SupportDefs[i].ModPath = modContext;
+
+            if (baseDefs.UpgradeDefs != null)
+                for (int i = 0; i < baseDefs.UpgradeDefs.Length; i++)
+                    baseDefs.UpgradeDefs[i].ModPath = modContext;
+
+            if (baseDefs.PhantomDefs != null)
+                for (int i = 0; i < baseDefs.PhantomDefs.Length; i++)
+                    baseDefs.PhantomDefs[i].ModPath = modContext;
+        }
 
         internal Randomize Random(float start, float end)
         {

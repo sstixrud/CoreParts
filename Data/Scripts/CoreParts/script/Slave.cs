@@ -41,13 +41,7 @@ namespace Scripts
         {
             ContainerDefinition baseDefs;
             Parts.GetBaseDefinitions(out baseDefs);
-            for (int i = 0; i < baseDefs.WeaponDefs.Length; i++)
-            {
-                var partDef = baseDefs.WeaponDefs[i];
-
-                if (partDef != null) 
-                    partDef.ModPath = ModContext.ModPath;
-            }
+            Parts.SetModPath(baseDefs, ModContext.ModPath);
             Storage = MyAPIGateway.Utilities.SerializeToBinary(baseDefs);
             Log.CleanLine($"Handing over control to Core and going to sleep");
         }
