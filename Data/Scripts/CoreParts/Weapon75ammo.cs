@@ -54,7 +54,7 @@ namespace Scripts
                 Reverse = false,
                 RandomizeDir = false, // randomize between forward and backward directions
             },
-            Pattern = new PatternDef()
+            Pattern = new PatternDef
             {
                 Patterns = new[] {
                     "",

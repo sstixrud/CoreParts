@@ -34,6 +34,7 @@ namespace Scripts
                 {
                     InventorySize = 1f,
                     Type = Default, //Default
+                    BlockDistance = 6,
                 },
                 Other = new OtherDef
                 {
@@ -46,6 +47,10 @@ namespace Scripts
                 },
             },
             Animations = Weapon75_Animation,
+            Consumable = new[] {
+                Consumable1,
+                Consumable2
+            },
             // Don't edit below this line
         };
     }
