@@ -34,7 +34,7 @@ namespace Scripts {
                         IconName = "TestIcon.dds",
                     },
                 },
-                Barrels = new[] {
+                Muzzles = new[] {
                     "muzzle_barrel_001",
                     "muzzle_barrel_002",
                     "muzzle_barrel_003",

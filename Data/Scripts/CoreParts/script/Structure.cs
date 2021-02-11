@@ -101,6 +101,7 @@ namespace Scripts
             [ProtoMember(3)] internal WeaponDefinition.AnimationDef Animations;
             [ProtoMember(4)] internal string ModPath;
             [ProtoMember(5)] internal ConsumeableDef[] Consumable;
+            [ProtoMember(6)] internal SupportEffect Effect;
 
             [ProtoContract]
             public struct ModelAssignmentsDef
@@ -126,20 +127,13 @@ namespace Scripts
                 [ProtoContract]
                 public struct UiDef
                 {
-                    [ProtoMember(1)] internal bool StrengthModifier;
+                    [ProtoMember(1)] internal bool ProtectionControl;
                 }
 
                 [ProtoContract]
                 public struct HardwareDef
                 {
-                    public enum HardwareType
-                    {
-                        Default,
-                    }
-
                     [ProtoMember(1)] internal float InventorySize;
-                    [ProtoMember(2)] internal HardwareType Type;
-                    [ProtoMember(3)] internal int BlockDistance;
                 }
 
                 [ProtoContract]
@@ -152,6 +146,38 @@ namespace Scripts
                     [ProtoMember(5)] internal bool CheckInflatedBox;
                     [ProtoMember(6)] internal bool CheckForAnySupport;
                 }
+            }
+
+            [ProtoContract]
+            public struct SupportEffect
+            {
+                public enum AffectedBlocks
+                {
+                    Logic,
+                    NonLogic,
+                    Both,
+                }
+
+                public enum Protections
+                {
+                    KineticProt,
+                    EnergeticProt,
+                    GenericProt,
+                    Regenerate,
+                    Structural,
+                }
+
+                [ProtoMember(1)] internal Protections Protection;
+                [ProtoMember(2)] internal AffectedBlocks Affected;
+                [ProtoMember(3)] internal int BlockRange;
+                [ProtoMember(4)] internal int MaxPoints;
+                [ProtoMember(5)] internal int PointsPerCharge;
+                [ProtoMember(6)] internal int UsablePerSecond;
+                [ProtoMember(7)] internal int UsablePerMinute;
+                [ProtoMember(8)] internal float Overflow;
+                [ProtoMember(9)] internal float Effectiveness;
+                [ProtoMember(10)] internal float ProtectionMin;
+                [ProtoMember(11)] internal float ProtectionMax;
             }
         }
 
@@ -248,7 +274,7 @@ namespace Scripts
             public struct ModelAssignmentsDef
             {
                 [ProtoMember(1)] internal MountPointDef[] MountPoints;
-                [ProtoMember(2)] internal string[] Barrels;
+                [ProtoMember(2)] internal string[] Muzzles;
                 [ProtoMember(3)] internal string Ejector;
                 [ProtoMember(4)] internal string Scope;
 
@@ -592,6 +618,7 @@ namespace Scripts
                     [ProtoMember(9)] internal FallOffDef FallOff;
                     [ProtoMember(10)] internal double HealthHitModifier;
                     [ProtoMember(11)] internal double VoxelHitModifier;
+                    [ProtoMember(12)] internal DamageTypes DamageType;
 
                     [ProtoContract]
                     public struct FallOffDef
@@ -628,8 +655,9 @@ namespace Scripts
                     {
                         internal enum Damage
                         {
-                            Energetic,
+                            Energy,
                             Kinetic,
+                            ShieldDefault,
                         }
 
                         [ProtoMember(1)] internal Damage Base;
@@ -643,11 +671,10 @@ namespace Scripts
                     {
                         internal enum ShieldType
                         {
+                            Default,
                             Heal,
                             Bypass,
                             Emp,
-                            Energy, // retired
-                            Kinetic // retired
                         }
 
                         [ProtoMember(1)] internal float Modifier;

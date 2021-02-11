@@ -5,18 +5,15 @@ namespace Scripts {
         // Don't edit above this line
         ConsumeableDef Consumable1 => new ConsumeableDef
         {
-
-                    ItemName = "item1",
-                    InventoryItem = "SomeKeenName",
-                    Hybrid = true,
-                    EnergyCost = 123f,
-                    Strength = 1000f,
-                    ItemsNeeded = 2,
-
+            ItemName = "item1",
+            InventoryItem = "SomeKeenName",
+            Hybrid = true,
+            EnergyCost = 123f,
+            Strength = 1000f,
+            ItemsNeeded = 2,
         };
         ConsumeableDef Consumable2 => new ConsumeableDef
         {
-
             ItemName = "item2",
             InventoryItem = "SomeKeenName2",
             Hybrid = true,

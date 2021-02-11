@@ -14,15 +14,10 @@ namespace Scripts
                         "AmmoType1",
                         "AmmoType2",
                     },
-                    Dependencies = new[] {
-                        new Dependency
-                        {
-                            SubtypeId = "blockName2", Quanity = 1,
-                        },
-                        new Dependency
-                        {
-                            SubtypeId = "blockName2", Quanity = 1,
-                        },
+                    Dependencies = new[] 
+                    {
+                        new Dependency {SubtypeId = "blockName2", Quanity = 1,},
+                        new Dependency {SubtypeId = "blockName3", Quanity = 1,},
                     },
                     AmmoPriority = 0,
                     RateOfFireMod = 100,

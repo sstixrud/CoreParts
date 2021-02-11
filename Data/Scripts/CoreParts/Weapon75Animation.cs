@@ -108,7 +108,7 @@ namespace Scripts
             //},
             AnimationSets = new[]
             {
-				#region Barrels Animations
+				#region Muzzles Animations
                 new PartAnimationSetDef()
                 {
                     SubpartId = Names("f75recoil"),

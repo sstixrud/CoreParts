@@ -15,6 +15,7 @@ using static Scripts.Structure.WeaponDefinition.AmmoDef.AreaDamageDef.EwarFields
 using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.TracerBaseDef;
 using static Scripts.Structure.WeaponDefinition.AmmoDef.GraphicDef.LineDef.Texture;
+using static Scripts.Structure.WeaponDefinition.AmmoDef.DamageScaleDef.DamageTypes.Damage;
 
 namespace Scripts
 { // Don't edit above this line
@@ -95,7 +96,7 @@ namespace Scripts
                 Shields = new ShieldDef
                 {
                     Modifier = 1f,
-                    Type = Energy,
+                    Type = Default,
                     BypassModifier = -1f,
                 },
                 // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
@@ -435,7 +436,7 @@ namespace Scripts
                 Shields = new ShieldDef
                 {
                     Modifier = 1f,
-                    Type = Energy,
+                    Type = Default,
                     BypassModifier = -1f,
                 },
                 // first true/false (ignoreOthers) will cause projectiles to pass through all blocks that do not match the custom subtypeIds.
@@ -456,6 +457,13 @@ namespace Scripts
                         },
                     },
                 },
+                DamageType = new DamageTypes
+                {
+                    Base = Kinetic,
+                    AreaEffect = Kinetic,
+                    Detonation = Energy,
+                    Shield = ShieldDefault,
+                }
             },
             AreaEffect = new AreaDamageDef
             {

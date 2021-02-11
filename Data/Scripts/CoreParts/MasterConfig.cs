@@ -11,7 +11,7 @@ namespace Scripts
             // PartFiles(Your1stConfigFile, Your2ndConfigFile, Your3rdConfigFile);
             PartFiles(Weapon75);
             ArmorFiles(Armor1, Armor2);
-            SupportFiles(ArmorEnhancer1a);
+            SupportFiles(ArmorEnhancer1A);
             UpgradeFiles(Upgrade75a, Upgrade75b);
         }
     }
