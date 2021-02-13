@@ -153,9 +153,10 @@ namespace Scripts
             {
                 public enum AffectedBlocks
                 {
-                    Logic,
-                    NonLogic,
-                    Both,
+                    Armor,
+                    ArmorPlus,
+                    PlusFunctional,
+                    All,
                 }
 
                 public enum Protections

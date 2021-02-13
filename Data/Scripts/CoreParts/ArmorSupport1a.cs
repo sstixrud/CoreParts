@@ -47,7 +47,7 @@ namespace Scripts {
             Effect = new SupportEffect
             {
                 Protection = GenericProt, //type of protection
-                Affected = NonLogic, // type of blocks protected
+                Affected = ArmorPlus, // type of blocks protected
                 BlockRange = 3, //protection range (in block units)
                 MaxPoints = 10000, //Max protection pool size
                 PointsPerCharge = 100, // Number of points per "charge/inventory item"
