@@ -17,7 +17,7 @@ namespace Scripts {
                 MountPoints = new[] {
                     new MountPointDef {
                         SubtypeId = "PDCTurretLB",
-                        AimPartId = "Boomsticks",
+                        SpinPartId = "Boomsticks",
                         MuzzlePartId = "Boomsticks",
                         AzimuthPartId = "",
                         ElevationPartId = "",
@@ -26,7 +26,7 @@ namespace Scripts {
                     },
                     new MountPointDef {
                         SubtypeId = "PDCTurretSB",
-                        AimPartId = "Boomsticks",
+                        SpinPartId = "Boomsticks",
                         MuzzlePartId = "Boomsticks",
                         AzimuthPartId = "",
                         ElevationPartId = "",
@@ -133,6 +133,7 @@ namespace Scripts {
                     GiveUpAfterBurst = false,
                     BarrelSpinRate = 0, // visual only, 0 disables and uses RateOfFire
                     DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
+                    SpinFree = true, // Spin while not firing
                 },
                 Audio = new HardPointAudioDef
                 {

@@ -283,7 +283,7 @@ namespace Scripts
                 public struct MountPointDef
                 {
                     [ProtoMember(1)] internal string SubtypeId;
-                    [ProtoMember(2)] internal string AimPartId; // no longer used
+                    [ProtoMember(2)] internal string SpinPartId; 
                     [ProtoMember(3)] internal string MuzzlePartId;
                     [ProtoMember(4)] internal string AzimuthPartId;
                     [ProtoMember(5)] internal string ElevationPartId;
@@ -493,6 +493,7 @@ namespace Scripts
                     [ProtoMember(15)] internal bool FireFullBurst;
                     [ProtoMember(16)] internal bool GiveUpAfterBurst;
                     [ProtoMember(17)] internal bool DeterministicSpin;
+                    [ProtoMember(18)] internal bool SpinFree;
                 }
 
 
