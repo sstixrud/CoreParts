@@ -41,6 +41,7 @@ namespace Scripts {
                     RestrictionRadius = 0, // Meters, radius of sphere disable this gun if another is present
                     CheckInflatedBox = false, // if true, the bounding box of the gun is expanded by the RestrictionRadius
                     CheckForAnySupport = false, // if true, the check will fail if ANY gun is present, false only looks for this subtype
+                    StayCharged = false, // Will start recharging whenever power cap is not full
                 },
             },
             Animations = Weapon75_Animation,
