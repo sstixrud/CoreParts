@@ -89,7 +89,7 @@ namespace Scripts {
                     PrimaryTracking = true,
                     LockOnFocus = false,
                     SuppressFire = false,
-                    ForceTargetLead = false, // Forces target leading HUD on for this weapon
+                    OverrideLeads = false, // Overrides default behavior for target lead
                 },
                 HardWare = new HardwareDef
                 {
