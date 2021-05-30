@@ -34,11 +34,6 @@ namespace Scripts
             Container.UpgradeDefs = defs;
         }
 
-        internal void PhantomFiles(params PhantomDefinition[] defs)
-        {
-            Container.PhantomDefs = defs;
-        }
-
         internal static void GetBaseDefinitions(out ContainerDefinition baseDefs)
         {
             baseDefs = new Parts().Container;
@@ -57,10 +52,6 @@ namespace Scripts
             if (baseDefs.UpgradeDefs != null)
                 for (int i = 0; i < baseDefs.UpgradeDefs.Length; i++)
                     baseDefs.UpgradeDefs[i].ModPath = modContext;
-
-            if (baseDefs.PhantomDefs != null)
-                for (int i = 0; i < baseDefs.PhantomDefs.Length; i++)
-                    baseDefs.PhantomDefs[i].ModPath = modContext;
         }
 
         internal Randomize Random(float start, float end)

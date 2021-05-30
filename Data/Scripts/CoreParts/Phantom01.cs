@@ -11,41 +11,26 @@ using static Scripts.Structure.WeaponDefinition.HardPointDef.HardwareDef.Hardwar
 namespace Scripts {   
     partial class Parts {
         // Don't edit above this line
-        WeaponDefinition Weapon75 => new WeaponDefinition
+        WeaponDefinition Phantom01 => new WeaponDefinition
         {
 
             Assignments = new ModelAssignmentsDef
             {
                 MountPoints = new[] {
                     new MountPointDef {
-                        SubtypeId = "PDCTurretLB",
-                        SpinPartId = "Boomsticks",
-                        MuzzlePartId = "Boomsticks",
-                        AzimuthPartId = "",
-                        ElevationPartId = "",
-                        DurabilityMod = 0.25f,
-                        IconName = "TestIcon.dds"
-                    },
-                    new MountPointDef {
-                        SubtypeId = "PDCTurretSB",
-                        SpinPartId = "Boomsticks",
-                        MuzzlePartId = "Boomsticks",
-                        AzimuthPartId = "",
-                        ElevationPartId = "",
-                        DurabilityMod = 0f,
-                        IconName = "TestIcon.dds",
+                        SubtypeId = "PhantomId",
+                        SpinPartId = "None",
+                        MuzzlePartId = "None",
+                        AzimuthPartId = "None",
+                        ElevationPartId = "None",
+                        PhantomModel = "\\Models\\F75Recoil",
                     },
                 },
                 Muzzles = new[] {
-                    "muzzle_barrel_001",
-                    "muzzle_barrel_002",
-                    "muzzle_barrel_003",
-                    "muzzle_barrel_004",
-                    "muzzle_barrel_005",
-                    "muzzle_barrel_006",
+                    "None",
                 },
                 Ejector = "",
-                Scope = "camera", //Where line of sight checks are performed from must be clear of block collision
+                Scope = "", //Where line of sight checks are performed from must be clear of block collision
             },
             Targeting = new TargetingDef
             {
@@ -68,7 +53,7 @@ namespace Scripts {
             },
             HardPoint = new HardPointDef
             {
-                PartName = "Gatling", // name of weapon in terminal
+                PartName = "Phantom", // name of weapon in terminal
                 DeviateShotAngle = 0.2f,
                 AimingTolerance = 1f, // 0 - 180 firing angle
                 AimLeadingPrediction = Accurate, // Off, Basic, Accurate, Advanced
@@ -104,13 +89,14 @@ namespace Scripts {
                     FixedOffset = false,
                     InventorySize = 1f,
                     Offset = Vector(x: 0, y: 0, z: 0),
-                    Type = BlockWeapon, // Upgrade, BlockWeapon, ActiveArmor, PassiveArmor, RegenArmor, Phantom 
+                    Type = Phantom, // Upgrade, BlockWeapon, ActiveArmor, PassiveArmor, RegenArmor, Phantom 
                     CriticalReaction = new CriticalDef
                     {
                         Enable = true,
                         DefaultArmedTimer = 120,
                         PreArmed = true,
                         TerminalControls = true,
+                        AmmoRound = "AmmoType2",
                     },
                 },
                 Other = new OtherDef
